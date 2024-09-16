@@ -12,7 +12,7 @@ const btn=document.querySelector("#btn")
 
 
 const genChoice = () => {
-  const options = ["stone", "paper", "scissors"];
+  const options = ["rock", "paper", "scissors"];
   const i = Math.floor(Math.random() * 3);
   return options[i];
 };
@@ -47,7 +47,7 @@ const playGame = (userChoice) => {
   }
   else {
     let userWin = true;
-    if (userChoice === "stone") {
+    if (userChoice === "rock") {
       userWin = compChoice === "paper" ? false : true;
     }
     else if (userChoice === "paper") {
@@ -56,7 +56,7 @@ const playGame = (userChoice) => {
     else {
       vs.style.color="sky blue";
 
-      userWin = compChoice === "stone" ? false : true;
+      userWin = compChoice === "rock" ? false : true;
     }
     showWinner(userWin);
   }
