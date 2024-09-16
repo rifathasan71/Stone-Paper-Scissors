@@ -45,6 +45,14 @@ img{
     align-items: center;
     font-size: 2rem;
     gap: 4rem;
+   
+}
+.score{
+    background-color: #8d2669;
+    height: 100px;
+    width: 150px;
+    border-radius: 1rem;
+    color: rgb(255, 255, 255);
 }
 .vs{
     display: flex;
@@ -53,6 +61,17 @@ img{
     gap: 4rem;
     margin-top: 2rem;
     font-size: 3rem;
+    color: #01200F;
+}
+
+#battle{
+    
+    background-color: #5D5F71;
+    color: #ffffff;
+    font-size: 2rem;
+    display: inline;
+    padding: 1rem;
+    border-radius: 1rem;
 }
 #action,#action2{
     margin-bottom: 1rem;
@@ -73,7 +92,7 @@ img{
 }
 #btn{
     margin-top: 2rem;
-    background-color: red;
+    background-color: #06BCC1;
     color: #fff;
     border-radius: 0.5rem;
     font-size: 2rem;

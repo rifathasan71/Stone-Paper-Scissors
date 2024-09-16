@@ -7,6 +7,9 @@ const  uScore=document.querySelector("#userScore")
 const  cScore=document.querySelector("#compScore")
 const vs=document.querySelector("#action")
 const vs2=document.querySelector("#action2")
+const btn=document.querySelector("#btn")
+
+
 
 const genChoice = () => {
   const options = ["stone", "paper", "scissors"];
@@ -23,7 +26,7 @@ const drawGame = () => {
 const showWinner = (userWin) => {
   if (userWin === true) {
     msg.innerText = "Congratulations, you won!";
-    msg.style.backgroundColor = "green";
+    msg.style.backgroundColor = "#D81E5B";
     userScore++;
     uScore.innerText=userScore;
   } else {
@@ -51,6 +54,8 @@ const playGame = (userChoice) => {
       userWin = compChoice === "scissors" ? false : true;
     }
     else {
+      vs.style.color="sky blue";
+
       userWin = compChoice === "stone" ? false : true;
     }
     showWinner(userWin);
@@ -63,3 +68,15 @@ choices.forEach((choice) => {
     playGame(userChoice);
   });
 });
+
+const reset=()=>{
+  userScore=0;
+  compScore=0;
+  uScore.innerText=userScore;
+  cScore.innerText=compScore;
+
+
+  }
+
+btn.addEventListener("click",reset);
+
